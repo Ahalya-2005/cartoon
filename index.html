@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CartoonStream - Your Cartoon Hub</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #222;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+        }
+
+        .hero-section {
+            background: url('https://example.com/cartoon-background.jpg') no-repeat center center;
+            background-size: cover;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .card {
+            background-color: #333;
+            border: none;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 15px;
+            flex-grow: 1;
+        }
+
+        .footer {
+            background-color: #111;
+            padding: 20px 0;
+            text-align: center;
+            color: #ddd;
+        }
+
+        .footer a {
+            color: #ddd;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .footer a:hover {
+            color: #fff;
+        }
+
+        .footer:hover {
+            background-color: #333;
+        }
+
+        .btn-primary {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            background-color: #007bff;
+            border: none;
+            margin-top: 10px;
+            align-self: flex-start;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+
+        .btn-primary:focus {
+            outline: none;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .col-md-4 {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        /* Ensure that each card occupies full column width */
+        .card {
+            width: 100%;
+        }
+
+        /* Navigation effects */
+        .navbar-nav .nav-link {
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffcc00;
+            text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7);
+        }
+
+        .navbar {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .navbar:hover {
+            background-color: #444;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">ANIL | SILPA | LOKESH | AHALYA</a> <!-- Added names beside AHALYA -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">TV Shows</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Originals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>Stream the Best Cartoons!</h1>
+            <p>Unlimited cartoons and shows for your entertainment</p>
+        </div>
+    </section>
+
+    <!-- Featured Cartoons Section -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Featured Cartoons</h2>
+        <div class="row">
+            <!-- Dynamically Display Cartoons in 3 Columns (3 Rows in Total) -->
+            <div class="col-md-3" id="cartoon1"></div>
+            <div class="col-md-3" id="cartoon2"></div>
+            <div class="col-md-3" id="cartoon3"></div>
+
+            <div class="col-md-3" id="cartoon4"></div>
+            <div class="col-md-3" id="cartoon5"></div>
+            <div class="col-md-3" id="cartoon6"></div>
+
+            <div class="col-md-3" id="cartoon7"></div>
+            <div class="col-md-3" id="cartoon8"></div>
+            <div class="col-md-3" id="cartoon9"></div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 CartoonStream. All rights reserved.</p>
+        <a href="#">Terms & Conditions</a> | 
+        <a href="#">Privacy Policy</a> | 
+        <a href="#">Contact Us</a>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script>
+        // Cartoons data including images, titles, and descriptions
+        const cartoonsData = [
+            {
+                id: 1,
+                image: 'https://2.bp.blogspot.com/-_9Y6kYK43q0/XxYZcvBskpI/AAAAAAABViM/lzSTWGODFjgjR_cNOlDdTzodeIqv6cyEgCNcBGAsYHQ/s1600/Motu-Patlu-Nickelodeon-India-Nick.jpg',
+                title: 'Motu Patlu',
+                description: 'Follow the hilarious adventures of Motu and Patlu in the world of Furfuri Nagar.'
+            },
+            {
+                id: 2,
+                image: 'https://wallpaperaccess.com/full/5326360.png',
+                title: 'Shinchan',
+                description: 'Join Shinchan, the mischievous boy, in his fun and chaotic adventures with his family and friends.'
+            },
+            {
+                id: 3,
+                image: 'https://pngimg.com/uploads/tom_and_jerry/tom_and_jerry_PNG5.png',
+                title: 'Tom and Jerry',
+                description: 'The classic rivalry between Tom the cat and Jerry the mouse continues in this animated series.'
+            },
+            {
+                id: 4,
+                image: 'https://m.media-amazon.com/images/M/MV5BZDhiMDQzZjctNTAxNi00MTcxLWFjMGEtMmI5ZWUwY2U5YTdmXkEyXkFqcGdeQXVyMTU3NTAwOTMx._V1_FMjpg_UX1000_.jpg',
+                title: 'Boondocks Bears',
+                description: 'The fun adventures of the Boondocks Bears with their hilarious antics.'
+            },
+            {
+                id: 5,
+                image: 'https://images6.fanpop.com/image/photos/36800000/Bheem-chhota-bheem-36886081-1920-1080.jpg',
+                title: 'Chhota Bheem',
+                description: 'The adventures of Chhota Bheem and his friends in Dholakpur.'
+            },
+            {
+                id: 6,
+                image: 'https://wallpapercave.com/wp/wp6154186.jpg',
+                title: 'Hidee Cartoon',
+                description: 'Enjoy the fun and quirky world of Hidee Cartoon.'
+            },
+            {
+                id: 7,
+                image: 'https://pbs.twimg.com/media/Eau8FvsUMAA7p38.jpg',
+                title: 'Power Rangers',
+                description: 'Join the Power Rangers in their epic battles against evil.'
+            },
+            {
+                id: 8,
+                image: 'https://th.bing.com/th/id/R.a698f7f03ec7b44f1dde4685a29c66f3?rik=jew%2f2RV9HRZZ6g&riu=http%3a%2f%2fimages4.fanpop.com%2fimage%2fphotos%2f21100000%2fCourage-the-Cowardly-Dog-courage-the-cowardly-dog-21182043-1600-1100.jpg&ehk=VDDqptTFkQ%2fMKX9t0aLv0lKH40ziHOjKh3JgAbHFSH8%3d&risl=&pid=ImgRaw&r=0',
+                title: 'Courage the Cowardly Dog',
+                description: 'Follow Courage as he protects his family from scary and strange events.'
+            },
+            {
+                id: 9,
+                image: 'https://wallpapercave.com/wp/wp2153329.jpg',
+                title: 'Doreamon',
+                description: 'Doreamon helps Nobita in his fun-filled adventures with futuristic gadgets.'
+            }
+        ];
+
+        // Dynamically display cartoons data in the HTML
+        for (let i = 0; i < cartoonsData.length; i++) {
+            const cartoon = cartoonsData[i];
+            const cartoonCard = `
+                <div class="card">
+                    <img src="${cartoon.image}" class="card-img-top" alt="${cartoon.title}">
+                    <div class="card-body">
+                        <h5 class="card-title">${cartoon.title}</h5>
+                        <p class="card-text">${cartoon.description}</p>
+                        <button class="btn btn-primary">More Info</button>
+                    </div>
+                </div>
+            `;
+            document.getElementById('cartoon' + (i + 1)).innerHTML = cartoonCard;
+        }
+    </script>
+
+</body>
+</html>
